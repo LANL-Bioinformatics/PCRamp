@@ -35,10 +35,10 @@ cc = mpicc
 FLAGS = -O3 -Wall -std=c++0x -DATA16 -DPOPCNT -msse4.2
 
 PROFILE = #-pg
-OPENMP = -Xpreprocessor -fopenmp
+OPENMP = -fopenmp
 	
-INC = -I. -I/Users/jgans/llvm-project/build-openmp/runtime/src
-LIBS = -lm -lz -L/Users/jgans/llvm-project/build-openmp/runtime/src -lomp
+INC = -I. 
+LIBS = -lm -lz
 
 .SUFFIXES : .o .cpp .c
 .cpp.o:
